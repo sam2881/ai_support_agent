@@ -1,0 +1,29 @@
+# error,remediation,category
+"DAG failed due to missing XCom","Check upstream task for return value",airflow
+"Pod crashloop on staging","Restart deployment via Kubernetes dashboard",devops
+"User john.doe lacks permission to view report","Assign 'analyst' role in IAM",access
+"airflow scheduler not running","Restart airflow-scheduler service",airflow
+"service timeout in prod","Scale replica count or restart service",devops
+"can't access data lake","Grant user 'data_read' role in Azure",access
+"Broken DAG: invalid syntax in dag file","Fix the syntax error in the DAG file and reload the Airflow scheduler",airflow
+"AirflowException: Task received SIGTERM","Check for worker timeouts or memory pressure, then rerun the specific task",airflow
+"Kubernetes API timeout during pod creation","Ensure API server is reachable, validate RBAC and retry",devops
+"IAM role assignment failed for new user","Ensure IAM policies are correctly defined and retry the role assignment",access
+"Failed to connect to metadata database","Check Airflow's connection string and ensure DB is accessible",airflow
+"CrashLoopBackOff error in Jenkins agent pod","Check Jenkins agent logs, inspect Docker image, and verify startup command",devops
+"403 Forbidden: user lacks access to S3 bucket","Grant read permission for the IAM role or user to access the specified bucket",access
+"Airflow DAG import error: No module named 'custom_plugin'","Ensure plugin is installed in Airflow environment and restart scheduler",airflow
+"Systemd service 'nginx' failed to restart","Use `journalctl -xe` to debug and reconfigure the service as needed",devops
+"Access denied: Tableau dashboard not visible","Assign 'viewer' or 'editor' role to user in Tableau workspace",access
+"KeyError: 'task_id' in airflow hooks","Ensure task_id is defined before accessing it in XCom or context",airflow
+"Pipeline failed at step 'load_transactions'","Check source file integrity and schema in BigQuery",airflow
+"Azure permission denied for blob storage read","Assign 'Storage Blob Reader' role to user or service principal",access
+"Ansible playbook error: 'become' not allowed","Review sudo permissions and update inventory/vars",devops
+"AirflowConnectionError: Host unreachable","Verify the connection config in Airflow and ensure DNS resolves",airflow
+"User not found in LDAP group","Ensure the user is assigned to correct LDAP group and re-sync IAM",access
+"Helm install failure: chart not found","Ensure repo is added with 'helm repo add' and try again",devops
+"ModuleNotFoundError: No module named 'pandas'","Ensure pandas is installed in your environment",airflow
+"PermissionError: Access is denied on file write","Ensure Airflow has write permissions on logs directory",airflow
+"Connection refused on port 443","Check firewall or VPN settings that may block outbound access",devops
+"Unauthorized access to dashboard","Verify SSO group mapping or token expiration",access
+"TimeoutError while querying Postgres","Check for long-running queries and raise statement timeout threshold",devops

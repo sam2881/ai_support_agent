@@ -1,0 +1,25 @@
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Other common Python ignores
+.env
+venv/
+.venv/
+data/
+*.log
+*.sqlite3
+*.db
+# AI specific
+faiss_index.bin
+docs.pkl
+# If you use a specific database or vector store that generates its own files
+# e.g., for ChromaDB or other local vector stores
+chroma/
+# Jupyter/VS Code specific
+.ipynb_checkpoints/
+.vscode/
+
+airflow/
+
+data/
